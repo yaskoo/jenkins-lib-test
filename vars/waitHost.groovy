@@ -2,6 +2,8 @@ def call(Map params = [:], Closure body) {
 	def host = params.host ?: 'google'
 
 	sh "${libraryResource(wait-host.sh)} ${host}"
+
+	body()
 }
 
 /**
