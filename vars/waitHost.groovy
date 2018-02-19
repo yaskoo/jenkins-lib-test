@@ -1,7 +1,7 @@
 def call(Map params = [:], Closure body) {
 	def host = params.host ?: 'google'
 
-	sh "./${copyGlobalLibraryScript(wait-host.sh)} ${host}"
+	sh "./${copyGlobalLibraryScript('wait-host.sh')} ${host}"
 
 	body()
 }
